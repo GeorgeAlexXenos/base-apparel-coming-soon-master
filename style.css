@@ -21,11 +21,7 @@
 body {
   display: flex;
   font-family: "Josefin Sans", sans-serif;
-  max-height: 100vh;
-  min-width: 100vw;
   margin: auto;
-  justify-content: center;
-  align-items: flex-start;
 }
 /* end general settings */
 
