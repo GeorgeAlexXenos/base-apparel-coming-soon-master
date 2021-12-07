@@ -126,12 +126,12 @@ button:active {
 
 /* ================================ */
 /* ======== error message ======== */
-/* button::before {
-  content: url(/images/icon-error.svg);
-  position: absolute;
-  right: 80px;
-  display: none;
-} */
+button::before {
+  /* content: url(/images/icon-error.svg);
+  position: absolute; */
+  right: 80px !important;
+  /* display: none; */
+}
 
 span.error-message {
   position: absolute;
@@ -223,7 +223,7 @@ span.error-message {
     right: 150px;
   }
   button::before {
-    right: 135px;
+    right: 135px !important;
   }
 
   span.error-message {

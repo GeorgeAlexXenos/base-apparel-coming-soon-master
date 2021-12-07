@@ -7,7 +7,7 @@ function validEmail() {
   slidingTagLiAfterStyle.innerHTML = `button:before {
   content: url(/images/icon-error.svg);
   position: absolute;
-  right: 80px;
+  right: 135px;
   display: "block";
 }`;
 
