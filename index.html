@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- start of header -->
+      <header>
+        <img src="./images/logo.svg" alt="" />
+      </header>
+      <!-- end of header -->
+
+      <!-- start of hero image section -->
+      <div class="image">
+        <img src="./images/hero-mobile.jpg" alt="" />
+      </div>
+      <!-- end of hero image section -->
+
+      <!-- start of details section -->
+      <div class="details">
+        <h1>
+          <span>We're</span>
+          coming<br />
+          soon
+        </h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form action="">
+          <input type="email" placeholder="Email Address" class="mail" />
+          <button onclick="validEmail()">
+            <img src="./images/icon-arrow.svg" />
+          </button>
+          <span class="error-message">Please provide a valid email</span>
+        </form>
+      </div>
+      <!-- end of details section -->
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

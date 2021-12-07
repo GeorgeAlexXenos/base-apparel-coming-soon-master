@@ -1,0 +1,239 @@
+/* font-family: 'Josefin Sans', sans-serif; */
+/* ## Colors */
+:root {
+  /* ### Primary */
+  --desaturatedRed: hsl(0, 36%, 70%);
+  --softRed: hsl(0, 93%, 68%);
+  /* ### Neutral */
+  --darkGrayishRed: hsl(0, 6%, 24%);
+  /* ### Gradients */
+  --linear1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --linear2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+/* general settings */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: "Josefin Sans", sans-serif;
+  max-height: 100vh;
+  min-width: 100vw;
+  margin: auto;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* end general settings */
+
+.container {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100px auto auto;
+  align-items: flex-start;
+  margin: auto;
+  justify-items: center;
+}
+
+header {
+  height: 100%;
+  min-width: 370px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+}
+
+.details {
+  padding: 3rem 0;
+}
+.details span {
+  display: block;
+  color: var(--desaturatedRed);
+  font-weight: 300;
+}
+h1 {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 3.2rem;
+  letter-spacing: 0.8rem;
+}
+.details > p {
+  margin: auto;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  line-height: 1.6rem;
+  color: var(--desaturatedRed);
+  max-width: 400px;
+  font-size: 1rem;
+}
+
+/* =========================== */
+/* ========== form ========== */
+/* ========================= */
+
+form {
+  width: 320px;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  position: relative;
+}
+
+input {
+  padding: 0 2rem;
+  height: 50px;
+  min-width: 320px;
+  border-radius: 2rem;
+  outline: none;
+  border: 0.2px solid rgba(3, 8, 24, 0.158);
+  font-size: 1.3rem;
+}
+
+input::placeholder {
+  color: var(--desaturatedRed);
+  opacity: 0.5;
+  font-size: 1.2rem;
+}
+
+button {
+  position: absolute;
+  width: 65px;
+  height: 50px;
+  right: 0;
+  border-radius: 2rem;
+  border: none;
+  background: var(--linear2);
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.226);
+  transition: all 300ms ease;
+}
+button:active {
+  filter: brightness(120%);
+}
+
+/* ================================ */
+/* ======== error message ======== */
+button::before {
+  content: url(/images/icon-error.svg);
+  position: absolute;
+  right: 80px;
+  display: none;
+}
+
+span.error-message {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  color: red;
+  display: none;
+}
+/* ======== end of error message ======== */
+/* ===================================== */
+/* ============================== */
+/* ======== end of form ======== */
+
+/* ======================================== */
+/* ============ media queries ============ */
+/* ====================================== */
+@media (min-width: 1240px) {
+  .container {
+    min-height: 100vh;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 1fr 3fr;
+  }
+  header {
+    min-width: 100%;
+    grid-area: 1 / 1 / -1 /2;
+    padding: 5rem 6rem;
+    background: url(./images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  header img {
+    align-self: start;
+    padding: 3rem 0 0 0;
+    width: 230px;
+  }
+  .details {
+    width: 100%;
+    padding: 4rem 6rem;
+    grid-area: 2 / 1 / -1 /2;
+  }
+  .image {
+    min-width: 100%;
+    min-height: 100%;
+    grid-area: 1 / 2 / -1 / -1;
+    background: url(./images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+  }
+  .image img {
+    display: none;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: left;
+    line-height: 4rem;
+    margin-bottom: 2.5rem;
+  }
+  .details > p {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 2.1rem;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+
+  form {
+    text-align: left;
+    margin: 0;
+    width: 600px;
+    margin-top: 5rem;
+  }
+  input {
+    min-width: 400px;
+    height: 65px;
+    border-radius: 100rem;
+  }
+  input::placeholder {
+    font-size: 1.5rem;
+  }
+  button {
+    height: 65px;
+    width: 120px;
+    border-radius: 100rem;
+    right: 150px;
+  }
+  button::before {
+    right: 135px;
+  }
+
+  span.error-message {
+    top: 85px;
+    left: 40px;
+  }
+}
+
+/* ========== end of media queries ========== */
