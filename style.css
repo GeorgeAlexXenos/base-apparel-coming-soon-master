@@ -126,10 +126,16 @@ button:active {
 
 /* ================================ */
 /* ======== error message ======== */
-button::before {
+/* button::before {
   right: 80px !important;
+} */
+.error-icon {
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
-
 span.error-message {
   position: absolute;
   top: 60px;
@@ -219,8 +225,9 @@ span.error-message {
     border-radius: 100rem;
     right: 150px;
   }
-  button::before {
-    right: 135px !important;
+  .error-icon {
+    left: 50%;
+    top: 50%;
   }
 
   span.error-message {
@@ -230,3 +237,4 @@ span.error-message {
 }
 
 /* ========== end of media queries ========== */
+
