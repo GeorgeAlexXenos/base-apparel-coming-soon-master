@@ -27,16 +27,3 @@ function validEmail() {
   }
 }
 
-// let errorIconMessage = document.querySelector("button"), "::before";
-// errorIconMessage.style.display = "block";
-// console.log(errorIconMessage);
-
-// let displayBeforeIcon = window
-//   .getComputedStyle(document.querySelector("button"), ":before")
-//   .setPropertyValue("display");
-// displayBeforeIcon.setPropertyValue("display")= "block";
-
-// content: url(/images/icon-error.svg);
-//   position: absolute;
-//   right: 80px;
-//   display: none;
