@@ -21,7 +21,7 @@ function validEmail() {
     }
     displayErrorMessage();
     setTimeout(() => {
-      document.head.removeChild(slidingTagLiAfterStyle);
+     /* document.head.removeChild(slidingTagLiAfterStyle); */
       errorMessage.style.display = "none";
     }, 2500);
   }
