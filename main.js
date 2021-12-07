@@ -7,8 +7,7 @@ function validEmail() {
   slidingTagLiAfterStyle.innerHTML = `button:before {
   content: url(/images/icon-error.svg);
   position: absolute;
-  right: 135px;
-  display: "block";
+  display: block;
 }`;
 
   if (mail.value.match(email)) {
@@ -21,9 +20,8 @@ function validEmail() {
     }
     displayErrorMessage();
     setTimeout(() => {
-     /* document.head.removeChild(slidingTagLiAfterStyle); */
+      document.head.removeChild(slidingTagLiAfterStyle);
       errorMessage.style.display = "none";
     }, 2500);
   }
 }
-
